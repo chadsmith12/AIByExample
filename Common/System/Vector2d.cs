@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Common.Math
+namespace Common.System
 {
     /// <summary>
     /// Represents a 2d Vector and defines the common operations on 2d Vectors.
     /// </summary>
-    /// <seealso cref="System.IEquatable{Vector2D}" />
+    /// <seealso cref="IEquatable{T}" />
     public struct Vector2D : IEquatable<Vector2D>
     {
         #region Fields
@@ -68,7 +68,7 @@ namespace Common.Math
             var yDist = v2.Y - Y;
             var xDist = v2.X - X;
 
-            return System.Math.Sqrt(yDist * yDist + xDist * xDist);
+            return global::System.Math.Sqrt(yDist * yDist + xDist * xDist);
         }
 
         /// <summary>
@@ -276,11 +276,11 @@ namespace Common.Math
         }
 
         /// <summary>
-        /// Determines whether the specified <see cref="System.Object" />, is equal to this Vector.
+        /// Determines whether the specified <see cref="object" />, is equal to this Vector.
         /// </summary>
-        /// <param name="obj">The <see cref="System.Object" /> to compare with this Vector.</param>
+        /// <param name="obj">The <see cref="object" /> to compare with this Vector.</param>
         /// <returns>
-        ///   <c>true</c> if the specified <see cref="System.Object" /> is equal to this Vector; otherwise, <c>false</c>.
+        ///   <c>true</c> if the specified <see cref="object" /> is equal to this Vector; otherwise, <c>false</c>.
         /// </returns>
         public override bool Equals(object obj)
         {
@@ -305,10 +305,10 @@ namespace Common.Math
 
         #region General Overrides        
         /// <summary>
-        /// Returns a <see cref="System.String" /> that represents this Vector.
+        /// Returns a <see cref="string" /> that represents this Vector.
         /// </summary>
         /// <returns>
-        /// A <see cref="System.String" /> that represents this Vector.
+        /// A <see cref="string" /> that represents this Vector.
         /// </returns>
         public override string ToString()
         {
@@ -332,7 +332,7 @@ namespace Common.Math
         /// <value>
         /// The length (Sqrt(X*X + Y*Y).
         /// </value>
-        public double Length => System.Math.Sqrt(X * X + Y * Y);
+        public double Length => global::System.Math.Sqrt(X * X + Y * Y);
 
         /// <summary>
         /// Gets the length of the Vector squared.
