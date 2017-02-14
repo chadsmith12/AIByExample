@@ -68,7 +68,7 @@ namespace Common.System
             var yDist = v2.Y - Y;
             var xDist = v2.X - X;
 
-            return global::System.Math.Sqrt(yDist * yDist + xDist * xDist);
+            return Math.Sqrt(yDist * yDist + xDist * xDist);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Common.System
         {
             if (Length > max)
             {
-                this.Normalize();
+                Normalize();
                 this *= max;
             }
         }
@@ -330,9 +330,9 @@ namespace Common.System
         /// Gets the length of the Vector.
         /// </summary>
         /// <value>
-        /// The length (Sqrt(X*X + Y*Y).
+        /// The length (Sqrt(X*X + Y*Y)).
         /// </value>
-        public double Length => global::System.Math.Sqrt(X * X + Y * Y);
+        public double Length => Math.Sqrt(X * X + Y * Y);
 
         /// <summary>
         /// Gets the length of the Vector squared.
@@ -356,7 +356,7 @@ namespace Common.System
         /// <value>
         /// The reversed form of the vector.
         /// </value>
-        public Vector2D Reversed => new Vector2D(-this.X, -this.Y);
+        public Vector2D Reversed => new Vector2D(-X, -Y);
         #endregion
     }
 }
